@@ -15,6 +15,7 @@ public class Program {
             TesteExcecao.geradorDeExceção();
         } catch (ArrayIndexOutOfBoundsException ex) {
             System.out.println("Índice de array fora dos limite");
+            ex.printStackTrace();
         }
         System.out.println("Exemplo de uma exceção caturada e tratada na chamada do método");
     }
