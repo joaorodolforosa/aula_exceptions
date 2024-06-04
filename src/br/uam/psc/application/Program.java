@@ -1,7 +1,5 @@
-// Exemplo de várias exceções capturadas
+// Exemplo de uso de throw
 package br.uam.psc.application;
-
-import br.uam.psc.UsoDeFinally;
 
 /**
  *
@@ -10,10 +8,12 @@ import br.uam.psc.UsoDeFinally;
 public class Program {
 
     public static void main(String[] args) {
-
-        for (int i = 0; i < 3; i++) {
-            UsoDeFinally.geradorDeExcecao(i);
-            System.out.println();
+        try {
+            System.out.println("Lançamento de uma exceção com throw");
+            throw new ArithmeticException();
+        } catch (ArithmeticException ex) {
+            System.out.println("Exceção ArithmeticException capturada");
         }
+        System.out.println("Após execução do bloco try/catch");
     }
 }
